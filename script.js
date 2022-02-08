@@ -53,12 +53,8 @@ const getData = async (event) => {
     const hour = parseInt(inpHour.value)
 
     const url = 'https://orari-backend.herokuapp.com/'
-    const data = await fetch(`${url}${day}/${hour}`)
-        .then((response) => {
-            console.log(response)
-            console.log(response.json())
-            response.json()
-        })
+    const data = await fetch(`${url}salla/${day}/${hour}`)
+        .then((response) => response.json())
         .then((data) => data)
         .catch((error) => console.log(`Error: ${error}`))
 
