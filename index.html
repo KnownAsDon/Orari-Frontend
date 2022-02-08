@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FSHN | Salla te lira</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="main">
+            <div id="data-in">
+                <form id="data-form" onsubmit="getData(event)" autocomplete="off">
+                    <button type="submit" id="submit-btn">Kerko</button>
+                    <div id="data-inp">
+                        <select id="dita" required>
+                            <option value="" selected hidden>Dita</option>
+                            <option value="1">E hene</option>
+                            <option value="2">E marte</option>
+                            <option value="3">E merkurre</option>
+                            <option value="4">E enjte</option>
+                            <option value="5">E premte</option>
+                        </select>
+                        <span>,</span>
+                        <select id="ora" required>
+                            <option value="" selected hidden>Ora</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div id="data-out"></div>
+
+            <!-- Copyright 2022 Don. All rights reserved. -->
+
+            <script src="script.js"></script>
+        </div>
+    </body>
+</html>

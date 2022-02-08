@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f2eecb;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#main {
+    padding: 35px 40px;
+}
+
+#data-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+#submit-btn {
+    background: none;
+    border: none;
+    font-size: 0.8em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    text-decoration-line: line-through;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+}
+
+#submit-btn:disabled {
+    color: #000;
+}
+
+#data-form select {
+    background: none;
+    border: none;
+    font-size: 0.8em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    text-align: center;
+    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+#data-out {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#data-out > div {
+    margin: 0 40px 10px 0;
+    width: 30px;
+}
+
+.data-out-godine-title {
+    font-weight: 600 !important;
+    margin-bottom: -5px;
+}
+
+#data-out h1 {
+    font-weight: 400;
+    font-size: 0.8em;
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+    #submit-btn,
+    #data-form select {
+        font-size: 1.4em;
+    }
+
+    #data-out > div {
+        margin: 0 100px 10px 0;
+    }
+
+    #data-out h1 {
+        font-size: 1.2em;
+    }
+}
