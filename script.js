@@ -52,7 +52,7 @@ const getData = async (event) => {
     const day = parseInt(inpDay.value)
     const hour = parseInt(inpHour.value)
 
-    const data = await fetch(`http://192.168.1.9:8000/salla/${day}/${hour}`)
+    const data = await fetch(`http:localhost:8000/salla/${day}/${hour}`)
         .then((response) => response.json())
         .then((data) => data)
         .catch((error) => console.log(`Error: ${error}`))
