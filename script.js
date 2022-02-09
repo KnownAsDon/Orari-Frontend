@@ -71,25 +71,32 @@ const getData = async (event) => {
     const dataColumns = []
 
     for (const godine in data) {
-        dataOutDiv.innerHTML += `
+        if (data[godine].length > 0 && /^[A-Z]$/g.test(godine)) {
+            dataOutDiv.innerHTML += `
         <div id="godine-${godine.toLocaleLowerCase()}">
             <h1 class="data-out-godine-title">${godine}</h1>
         </div>
         `
 
-        await sleep(300)
+            await sleep(300)
+        }
     }
+
+    await sleep(100)
 
     for (const godine in data) {
         if (Object.hasOwnProperty.call(data, godine)) {
             const sallat = data[godine]
 
+            console.log(sallat, sallat.length)
             for (const salle of sallat) {
-                document.querySelector(
-                    `#godine-${godine.toLocaleLowerCase()}`
-                ).innerHTML += `<h1>${salle}</h1>`
+                if (sallat.length > 0 && /^[A-Z]$/g.test(godine)) {
+                    document.querySelector(
+                        `#godine-${godine.toLocaleLowerCase()}`
+                    ).innerHTML += `<h1>${salle}</h1>`
 
-                await sleep(100)
+                    await sleep(100)
+                }
             }
         }
     }
