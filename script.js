@@ -13,6 +13,7 @@ for (let i = 8; i < 20; i++) {
 
 const inpDay = document.querySelector('#dita')
 const inpHour = document.querySelector('#ora')
+const submitBtn = document.querySelector('#submit-btn')
 
 const date = new Date()
 const today = date.getDay()
@@ -21,13 +22,13 @@ const hours = date.getHours()
 if (today >= 1 && today <= 5 && hours >= 8 && hours <= 19) {
     inpDay[today].selected = true
     inpHour[hours - 7].selected = true
+    submitBtn.style.textDecorationLine = 'underline'
 }
 
 //
 //
 
 const selectTags = document.querySelectorAll('#data-form select')
-const submitBtn = document.querySelector('#submit-btn')
 
 selectTags.forEach((select) => {
     select.addEventListener('change', () => {
