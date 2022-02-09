@@ -55,12 +55,15 @@ const getData = async (event) => {
 
     const dataOutDiv = document.querySelector('#data-out')
 
-    dataOutDiv.innerHTML = 'Loading...'
+    const loadingTimeout = setTimeout(() => (dataOutDiv.innerHTML = '<h1>Loading...</h1>'), 1500)
 
     const url = 'https://orari-backend.herokuapp.com/'
     const data = await fetch(`${url}salla/${day}/${hour}`)
         .then((response) => response.json())
-        .then((data) => data)
+        .then((data) => {
+            clearTimeout(loadingTimeout)
+            return data
+        })
         .catch((error) => console.log(`Error: ${error}`))
 
     dataOutDiv.innerHTML = ''
