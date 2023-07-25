@@ -57,7 +57,7 @@ const getData = async (event) => {
 
     const loadingTimeout = setTimeout(() => (dataOutDiv.innerHTML = '<h1>Loading...</h1>'), 1500)
 
-    const url = 'https://orari-backend.herokuapp.com/'
+    const url = 'https://fshn-backend-z7kk.onrender.com/'
     const data = await fetch(`${url}salla/${day}/${hour}`)
         .then((response) => response.json())
         .then((data) => {
